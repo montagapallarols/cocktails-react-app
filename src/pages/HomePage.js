@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [searchText, setSearchText] = useState("");
@@ -10,9 +11,6 @@ export default function Home() {
 
   const [searchBy, setSearchBy] = useState("Ingredient...");
 
-  const queryParam = encodeURIComponent(searchText);
-  // console.log("Queryparam is:", queryParam);
-
   function onChangeText(event) {
     // console.log(searchText);
     setSearchText(event.target.value);
@@ -22,9 +20,14 @@ export default function Home() {
     console.log("Search for this cocktail:", searchText);
     setSearchStatus({ status: "Searching...", data: [] });
 
-    const response = await axios.get(
-      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${queryParam}`
-    );
+    const response =
+      searchBy === "Ingredient..."
+        ? await axios.get(
+            `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchText}`
+          )
+        : await axios.get(
+            `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchText}`
+          );
 
     console.log("Got data back:", response);
 
@@ -49,7 +52,6 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
       <p>Welcome to Cocktail Explorer</p>
       <p>
         Go to Categories in the header menu to find a list of all cocktail
@@ -72,11 +74,13 @@ export default function Home() {
       <h2>{searchStatus.status}</h2>
 
       {searchStatus.data.map((cocktail) => {
-        console.log("What's cocktail:", cocktail);
+        // console.log("What's cocktail:", cocktail);
         return (
           <div className="card_container" key={cocktail.idDrink}>
             <div className="cocktail-card">
-              <h3>{cocktail.strDrink}</h3>
+              <Link to={`/cocktail/${cocktail.idDrink}`}>
+                <h3>{cocktail.strDrink}</h3>
+              </Link>
               <img
                 src={cocktail.strDrinkThumb}
                 alt={cocktail.strDrink}
