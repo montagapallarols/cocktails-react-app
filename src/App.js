@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import CategoriesPage from "./pages/CategoriesPage";
 import DiscoverPage from "./pages/DiscoverPage";
 import CocktailDetails from "./components/CocktailDetails";
+import CategoriesCocktails from "./components/CategoriesCocktails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/categories" component={CategoriesPage} />
         <Route exact path="/discover" component={DiscoverPage} />
         <Route exact path="/cocktail/:idDrink" component={CocktailDetails} />
+        <Route exact path="/categories/:strCategory" component={CategoriesCocktails} />
       </Switch>
     </div>
   );
