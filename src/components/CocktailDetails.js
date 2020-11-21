@@ -56,7 +56,6 @@ export default function CocktailDetails() {
           <p>{c.strIngredient13}</p>
           <p>{c.strIngredient14}</p>
           <p>{c.strIngredient15}</p>
-       
         </div>
       })}
     </div>

@@ -16,11 +16,15 @@
   color: #61dafb;
 }
 
-/* .card-container {
-  display: flex;
+.card-container {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .cocktail-card {
-  flex: 33.33%;
-  padding: 5px;
-} */
+  flex-grow: 1; /* <-- Lets them grow equally */
+  flex-shrink: 1; /* <-- Lets them shrink equally. OPTIONAL as 1 is the default */
+  max-width: 400px;
+  margin: 0px 5px;
+}

@@ -22,11 +22,13 @@ export default function CategoriesCocktails() {
     return (
         <div>
             {categories.map(c => {
-                return <div>
+                return <div className="card-container" key={c.idDrink}>
+                  <div className="cocktail-card">
                     <Link to={`/cocktail/${c.idDrink}`}>
                     <h3>{c.strDrink}</h3>
                     </Link>
                     <img src={c.strDrinkThumb} alt="cocktail" height="200px"/>
+                    </div>
                 </div>
             })}
         </div>

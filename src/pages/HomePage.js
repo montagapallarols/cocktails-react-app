@@ -76,7 +76,7 @@ export default function Home() {
       {searchStatus.data.map((cocktail) => {
         // console.log("What's cocktail:", cocktail);
         return (
-          <div className="card_container" key={cocktail.idDrink}>
+          <div className="card-container" key={cocktail.idDrink}>
             <div className="cocktail-card">
               <Link to={`/cocktail/${cocktail.idDrink}`}>
                 <h3>{cocktail.strDrink}</h3>
