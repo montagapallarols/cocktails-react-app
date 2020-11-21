@@ -54,11 +54,11 @@ export default function Home() {
   return (
     <div>
       <p>Welcome to Cocktail Explorer!</p>
-      <img className="home-image" src="/images/cocktails.jpg" alt="cocktail" height="200px"/>
       <p>
         Go to <em>Categories</em> to find a list of all cocktail
         categories or search for specific cocktails below.
       </p>
+      <img className="home-image" src="/images/cocktails.jpg" alt="cocktail" height="200px"/>
       <p>
         <select onChange={changeSearch}>
           <option value="Ingredient...">Search by ingredient</option>
