@@ -53,13 +53,12 @@ export default function Home() {
 
   return (
     <div>
-      {/* <p>Welcome to Cocktail Explorer</p> */}
-      <img src="/images/cocktails.jpg" alt="cocktail" height="200px"/>
-      {/* <p>
-        Go to Categories in the header menu to find a list of all cocktail
-        categories.
+      <p>Welcome to Cocktail Explorer!</p>
+      <img className="home-image" src="/images/cocktails.jpg" alt="cocktail" height="200px"/>
+      <p>
+        Go to Categories to find a list of all cocktail
+        categories or search for specific cocktails below.
       </p>
-      <p>You can also search for specific cocktails below.</p> */}
       <p>
         <select onChange={changeSearch}>
           <option value="Ingredient...">Search by ingredient</option>
@@ -80,14 +79,15 @@ export default function Home() {
         return (
           <div className="card-container" key={cocktail.idDrink}>
             <div className="cocktail-card">
-              <Link to={`/cocktail/${cocktail.idDrink}`}>
+              <Link className="link" to={`/cocktail/${cocktail.idDrink}`}>
                 <h3>{cocktail.strDrink}</h3>
-              </Link>
+              
               <img
                 src={cocktail.strDrinkThumb}
                 alt={cocktail.strDrink}
                 height="200px"
               />
+              </Link>
             </div>
           </div>
         );

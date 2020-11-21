@@ -24,7 +24,7 @@ export default function About() {
       <h2>All Categories</h2>
       {categories.map(c => {
         return <div key={Math.random()}>
-          <Link to={`/categories/${c.strCategory}`}>
+          <Link className="link" to={`/categories/${c.strCategory}`}>
           <p>{c.strCategory}</p>
           </Link>
         </div>

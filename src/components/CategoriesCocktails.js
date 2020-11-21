@@ -24,10 +24,10 @@ export default function CategoriesCocktails() {
             {categories.map(c => {
                 return <div className="card-container" key={c.idDrink}>
                   <div className="cocktail-card">
-                    <Link to={`/cocktail/${c.idDrink}`}>
+                    <Link className="link" to={`/cocktail/${c.idDrink}`}>
                     <h3>{c.strDrink}</h3>
-                    </Link>
                     <img src={c.strDrinkThumb} alt="cocktail" height="200px"/>
+                    </Link>
                     </div>
                 </div>
             })}
