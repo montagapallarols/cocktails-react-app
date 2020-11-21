@@ -28,3 +28,13 @@
   max-width: 400px;
   margin: 0px 5px;
 }
+
+.nav {
+  text-decoration: none;
+  padding: 30px;
+  color: #686d76;
+}
+
+.nav-bar {
+  padding-top: 15px;
+}
