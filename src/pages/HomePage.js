@@ -56,7 +56,7 @@ export default function Home() {
       <p>Welcome to Cocktail Explorer!</p>
       <img className="home-image" src="/images/cocktails.jpg" alt="cocktail" height="200px"/>
       <p>
-        Go to Categories to find a list of all cocktail
+        Go to <em>Categories</em> to find a list of all cocktail
         categories or search for specific cocktails below.
       </p>
       <p>
