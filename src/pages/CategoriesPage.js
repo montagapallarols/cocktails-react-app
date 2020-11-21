@@ -25,7 +25,7 @@ export default function About() {
       <img className="categories-image" src="/images/cocktails3.jpg" alt="cocktail" height="130px"/>
       {categories.map(c => {
         return <div key={Math.random()}>
-          <Link className="link" to={`/categories/${c.strCategory}`}>
+          <Link className="link" to={`/categories/${c.strCategory}`} target="_blank">
           <p>{c.strCategory}</p>
           </Link>
         </div>

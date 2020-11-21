@@ -71,7 +71,7 @@ export default function Home() {
         value={searchText}
         placeholder={searchBy}
       ></input>
-      <Button variant="outline-dark" onClick={onClickSearch}>Search</Button>
+      <Button variant="dark" onClick={onClickSearch}>Search</Button>
       <h2>{searchStatus.status}</h2>
 
       {searchStatus.data.map((cocktail) => {
@@ -79,7 +79,7 @@ export default function Home() {
         return (
           <div className="card-container" key={cocktail.idDrink}>
             <div className="cocktail-card">
-              <Link className="link" to={`/cocktail/${cocktail.idDrink}`}>
+              <Link className="link" to={`/cocktail/${cocktail.idDrink}`} target="_blank">
                 <h3>{cocktail.strDrink}</h3>
               
               <img
