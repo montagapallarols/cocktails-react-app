@@ -35,7 +35,7 @@ export default function CocktailDetails() {
       {cocktailDetails.data.map(c => {
         return <div key={c.idDrink}>
           <h3>{c.strDrink}</h3>
-          <img src={c.strDrinkThumb} alt="cocktail" height="200px"/>
+          <img className="cocktail-image" src={c.strDrinkThumb} alt="cocktail" height="200px"/>
           <p><strong>Category: </strong> {c.strCategory}</p>
           <p><strong>Alcoholic? </strong> {c.strAlcoholic === "Alcoholic" ? "Yes!" : "No!"}</p>
           <p><strong>Glass type: </strong>{c.strGlass}</p>

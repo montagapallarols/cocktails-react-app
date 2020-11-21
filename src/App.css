@@ -33,8 +33,21 @@
   text-decoration: none;
   padding: 30px;
   color: #686d76;
+  position: relative;
+  font-size: 1rem;
 }
 
 .nav-bar {
-  padding-top: 15px;
+  padding: 15px 450px 15px;
+  background-color: #def4e4;
 }
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* .cocktail-image {
+  float: left;
+  padding: 40px;
+} */

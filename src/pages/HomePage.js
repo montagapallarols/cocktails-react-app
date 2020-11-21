@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 export default function Home() {
   const [searchText, setSearchText] = useState("");
@@ -52,7 +53,7 @@ export default function Home() {
 
   return (
     <div>
-      <p>Welcome to Cocktail Explorer</p>
+      {/* <p>Welcome to Cocktail Explorer</p> */}
       <img src="/images/cocktails.jpg" alt="cocktail" height="200px"/>
       {/* <p>
         Go to Categories in the header menu to find a list of all cocktail
@@ -71,7 +72,7 @@ export default function Home() {
         value={searchText}
         placeholder={searchBy}
       ></input>
-      <button onClick={onClickSearch}>Search</button>
+      <Button variant="outline-dark" onClick={onClickSearch}>Search</Button>
       <h2>{searchStatus.status}</h2>
 
       {searchStatus.data.map((cocktail) => {
